@@ -1,0 +1,105 @@
+[
+    {
+        "name":"Lemon Grass - Herb Seeds",
+        "price":250 ,
+         "description": "indoor plant",
+    "image":"/medicinal/m1.jpg",
+    "discount":"50"
+
+    },
+     {
+        "name":"Lemon Grass - Herb Seeds",
+        "price": 400,
+         "description": "indoor plant",
+    "image":"/medicinal/m2.webp"
+    },
+     {
+        "name":"Basil Genovese Green - Herb Seeds",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/medicinal/m3.jpg"
+    },
+     {
+        "name":"Insulin Plant, Costus igneus - Plant",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/medicinal/m4.webp"
+    },
+     {
+        "name":"German Chamomile - Herb Seeds",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/medicinal/m5.webp",
+    "discount":"20"
+    },
+     {
+        "name":"Vinca F1 Nana Black Purple - Flower Seeds",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/medicinal/m6.webp"
+    },
+     {
+        "name":"Vinca Mixed Color, Periwinkle Mixed Color - Desi Flower Seeds",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/medicinal/m7.jpg"
+    },
+     {
+        "name":"Basil Sweet Scented - Herb Seeds",
+        "price": 288,
+         "description": "indoor plant",
+    "image":"/medicinal/m8.jpg"
+    },
+     {
+        "name":"Drumsticks, Moringa Oleifera - Plant",
+        "price":167 ,
+         "description": "indoor plant",
+    "image":"/medicinal/m9.jpg"
+    },
+
+{
+        "name":"Thyme, Thymus vulgaris - Herb Seeds",
+        "price": 198,
+         "description": "indoor plant",
+    "image":"/medicinal/m10.jpg"
+    },
+    {
+        "name":"Ashwagandha India Ginseng - Herb Seeds",
+        "price": 366,
+         "description": "indoor plant",
+    "image":"/medicinal/m11.jpg",
+    "discount":"25"
+    },
+    {
+        "name":"Lemon Balm - Herb Seeds",
+        "price": 170,
+         "description": "indoor plant",
+    "image":"/medicinal/m12.jpg"
+    },
+    {
+        "name":"Piper Betel, Maghai Paan - Plant",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/medicinal/m12.webp"
+    },
+    {
+        "name":"Cissus Quadrangularis, Hadjod - Plant",
+        "price": 100,
+         "description": "indoor plant",
+    "image":"/medicinal/m13.webp"
+    },
+    {
+        "name":"turmeric - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/medicinal/m14.jpg"
+    },
+     {
+        "name":"Papaya Shah Nanah - Fruit Seeds",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/medicinal/m15.jpg"
+    }
+
+
+]

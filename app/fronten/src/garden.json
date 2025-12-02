@@ -1,0 +1,75 @@
+[
+    {
+        "name":"Pressure Sprayer (1.5 ltr) - Gardening Tool",
+        "price":250 ,
+         "description": "indoor plant",
+    "image":"/images/g1.jpg",
+    "discount":"50"
+
+    },
+     {
+        "name":"Transplanting Trowel No. MMI 83 - Gardening Tool",
+        "price": 400,
+         "description": "indoor plant",
+    "image":"/images/g2.jpg"
+    },
+     {
+        "name":"Pruning Shear No. MMI 58 - Gardening Tool",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/g3.jpg"
+    },
+     {
+        "name":"Bonsai Set No.1025 - Gardening Tools",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/images/g4.jpg"
+    },
+     {
+        "name":"Hedge Shear with Wooden Handle No. MMI-78 - Gardening Tool",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/images/g5.jpg",
+    "discount":"20"
+    },
+     {
+        "name":"2 inch (5 cm) Khurpa Steel Handle with Grip No. MMI 88 - Gardening Tool",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/images/g6.jpg"
+    },
+     {
+        "name":"Gardening Water Can No. 1117 ( 5 ltr) - Gardening Tool",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/images/g7.jpg"
+    },
+     {
+        "name":"2ft Coir Pole (set of 2)",
+        "price": 288,
+         "description": "indoor plant",
+    "image":"/images/g8.webp"
+    },
+     {
+        "name":"Pruning Secateur with Grip No. MMI 61 - Gardening Tool",
+        "price":167 ,
+         "description": "indoor plant",
+    "image":"/images/g9.jpg"
+    },
+
+{
+        "name":"3 Prong Hand Cultivator No. MMI 84 - Gardening Tool",
+        "price": 198,
+         "description": "indoor plant",
+    "image":"/images/g10.jpg"
+    },
+    {
+        "name":"",
+        "price": 366,
+         "description": "indoor plant",
+    "image":"/images/g11.jpg",
+    "discount":"25"
+    }
+    
+
+]

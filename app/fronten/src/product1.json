@@ -1,0 +1,102 @@
+[
+    {
+        "id": "indoor-001",
+        "name":"Peace Lily, Spathiphyllum - Plant",
+        "price": 250,
+        "description": "Beautiful peace lily plant perfect for indoor spaces. Known for air purification and elegant white flowers.",
+        "image":"/indoor/i1.webp",
+        "discount": 50,
+        "category": "Indoor Plants"
+    },
+     {
+        "id": "indoor-002",
+        "name":"Areca Palm (Small) - Plant",
+        "price": 400,
+        "description": "Small areca palm perfect for indoor decoration. Easy to care for and adds tropical vibes to your space.",
+        "image":"/indoor/i2.webp",
+        "category": "Indoor Plants"
+    },
+     {
+        "name":"Syngonium (Pink) - Plant",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/indoor/i3.webp"
+    },
+     {
+        "name":"Elephant bush, Portulacaria afra, Jade plant (Green) - Succulent Plant",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/indoor/i4.webp"
+    },
+     {
+        "name":"Zamioculcas zamiifolia, ZZ Plant Plant in 4 inch Pot",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/indoor/i5.webp",
+    "discount":"20"
+    },
+     {
+        "name":"Money plant marble prince, Scindapsus n joy - Plant",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/indoor/i6.webp"
+    },
+     {
+        "name":"Peace Lily, Spathiphyllum Plant in 4 inch Pot",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/indoor/i7.webp"
+    },
+     {
+        "name":"Chlorophytum, Spider Plant - Plant",
+        "price": 288,
+         "description": "indoor plant",
+    "image":"/indoor/i8.webp"
+    },
+     {
+        "name":"Chlorophytum, Spider Plant in 4 inch Pot",
+        "price":167 ,
+         "description": "indoor plant",
+    "image":"/indoor/i9.webp"
+    },
+
+{
+        "name":"Nephrolepis exaltata (Green) Fern Plant in 5 inch Pot",
+        "price": 198,
+         "description": "indoor plant",
+    "image":"/indoor/i10.webp"
+    },
+    {
+        "name":"Snake Plant, Sansevieria trifasciata, Sansevieria zeylanica Plant in 5 inch Pot",
+        "price": 366,
+         "description": "indoor plant",
+    "image":"/indoor/i11.webp",
+    "discount":"25"
+    },
+    {
+        "name":"Rubber Tree, Rubber Plant, Ficus elastica (Small) - Plant",
+        "price": 170,
+         "description": "indoor plant",
+    "image":"/indoor/i12.webp"
+    },
+    {
+        "name":"Nephrolepis exaltata (Green) Fern Plant in 5 inch Pot",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/indoor/i3.webp"
+    },
+    {
+        "name":"Nephrolepis exaltata (Green) Fern Plant in 5 inch Pot",
+        "price": 100,
+         "description": "indoor plant",
+    "image":"/indoor/i14.webp"
+    },
+    {
+        "name":"Nephrolepis exaltata (Green) Fern Plant in 5 inch Pot",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/indoor/i15.webp"
+    }
+
+
+]

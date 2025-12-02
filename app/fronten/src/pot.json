@@ -1,0 +1,45 @@
+
+[{
+        "name":"Piper Betel, Maghai Paan - Plant",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/medicinal/m12.webp"
+    },
+    {
+        "name":"Top 4 Die Hard Succulents Pack",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/p1.webp"
+    },
+    {
+        "name":"Money Plant, Scindapsus ( Pack of 3) - Plant",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/p2.webp"
+    },
+    {
+        "name":"Top 4 Die Hard",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/p3.webp"
+    },
+    {
+        "name":" Maghai Paan - Plant",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/p4.jpg"
+    },
+     {
+        "name":"turmeric - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/medicinal/m14.jpg"
+    },
+     {
+        "name":"Papaya Shah Nanah - Fruit Seeds",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/medicinal/m15.jpg"
+    }
+
+]

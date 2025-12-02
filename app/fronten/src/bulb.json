@@ -1,0 +1,75 @@
+[
+    {
+        "name":"Rajnigandha, Tuberose - Bulbs (set of 10)",
+        "price":250 ,
+         "description": "indoor plant",
+    "image":"/images/s1.webp",
+    "discount":"50"
+
+    },
+     {
+        "name":"Gladiolus (Random color) - Bulbs (set of 10)",
+        "price": 400,
+         "description": "indoor plant",
+    "image":"/images/s2.webp"
+    },
+     {
+        "name":"Ranunculus (Random Color) - Bulbs",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/s3.webp"
+    },
+     {
+        "name":"Zephyranthes Lily, Rain Lily (Random color) - Bulbs (set of 10)",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/images/s4.webp"
+    },
+     {
+        "name":"Tulip (Random Color) - Bulbs",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/images/s5.jpg",
+    "discount":"20"
+    },
+     {
+        "name":"Capsicum Green - Desi Vegetable Seeds",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/images/s6.jpg"
+    },
+     {
+        "name":"Cherry Tomato, Cherry Tomato Honey - Vegetable Seeds",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/images/s7.jpg"
+    },
+     {
+        "name":"Strawberry - Fruit Seeds",
+        "price": 288,
+         "description": "indoor plant",
+    "image":"/images/s8.jpg"
+    },
+     {
+        "name":"Chilli Surajmukhi - Desi Vegetable Seeds",
+        "price":167 ,
+         "description": "indoor plant",
+    "image":"/images/s9.jpg"
+    },
+
+{
+        "name":"Carrot Red Long - Desi Vegetable Seeds",
+        "price": 198,
+         "description": "indoor plant",
+    "image":"/images/s10.jpg"
+    },
+    {
+        "name":"Cauliflower Snowball 16 - Desi Vegetable Seeds",
+        "price": 366,
+         "description": "indoor plant",
+    "image":"/images/s11.jpg",
+    "discount":"25"
+    }
+    
+
+]

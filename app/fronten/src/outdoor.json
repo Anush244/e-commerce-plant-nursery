@@ -1,0 +1,107 @@
+[
+    {
+        "name":"Mango Tree (Alphonso, Grafted) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o1.webp"
+    },
+     {
+        "name":"Kagzi Nimboo, Lemon Tree - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o2.webp"
+    },
+     {
+        "name":"Fig Tree, Anjeer Fruit, Common Fig Fruit - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o3.webp"
+    },
+     {
+        "name":"Kadam Tree, Kadamb - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o4.webp"
+    },
+     {
+        "name":"Ornamental Orange Fruit (Green Leaves) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o5.webp"
+    },
+     {
+        "name":"Bel Tree, Bilva Patra, Bel Patra ( Grown through seeds ) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o6.webp"
+    },
+     {
+        "name":"Nimboo, Lemon Tree (Big Fruit, Grafted) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o7.webp"
+    },
+     {
+        "name":"Gulmohar Tree, Delonix regia - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o8.webp"
+    },
+     {
+        "name":"Gardenia Dwarf, Ananta Dwarf - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o9.webp"
+    },
+
+{
+        "name":"Kamini - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o10.webp"
+    },
+    {
+        "name":"Michelia Champa, Son Champa ( Orange, Grafted ) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o11.jpg"
+    },
+    {
+        "name":"Amla Tree, Indian Gooseberry (Big Fruit, Grown Through Seeds) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o12.webp"
+    },
+    {
+        "name":"Neem Tree, Azadirachta indica - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o13.webp"
+    },
+    {
+        "name":"Apple Tree (Grafted) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o14.webp"
+    },
+     {
+        "name":"Mango Tree (Badami, Grafted) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o15.webp"
+    },
+     {
+        "name":"Coconut Tree -lant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o16.webp"
+    },
+     {
+        "name":"Tree (Grafted) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o9.webp"
+    }
+
+
+]

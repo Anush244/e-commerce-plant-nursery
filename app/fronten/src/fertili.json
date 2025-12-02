@@ -1,0 +1,48 @@
+[
+    {
+        "name":"Urea soil fertilizer",
+        "price":250 ,
+         "description": "indoor plant",
+    "image":"/images/z1.webp",
+    "discount":"50"
+
+    },
+     {
+        "name":"Piguid urea -fertilizer",
+        "price": 400,
+         "description": "indoor plant",
+    "image":"/images/z2.webp"
+    },
+     {
+        "name":"Potasm-fertilizer",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/z3.webp"
+    },
+     {
+        "name":"Sea Secret (Sea Weed Extract Granules, 500 g) (Set of 2)",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/images/z4.jpg"
+    },
+     {
+        "name":"Refill Pack for Home Compost Kit (For Family of 2)",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/images/z5.jpg",
+    "discount":"20"
+    },
+     {
+        "name":"Coco peat block - 600 g (Expands Up to 5 - 8 L)",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/images/z6.webp"
+    },
+     {
+        "name":"Coco Husk Block - 4.5 kg",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/images/z7.jpg"
+    }
+     
+]

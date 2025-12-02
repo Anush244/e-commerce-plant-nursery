@@ -1,0 +1,87 @@
+[
+    {
+        "name":"Set of 2 Bonsai Looking Grafted Adeniums",
+        "price":250 ,
+         "description": "indoor plant",
+    "image":"/indoor/f1.jpg",
+    "discount":"50"
+
+    },
+     {
+        "name":"Portulaca Garden Pack (4 Plants + 4 Black Pots)",
+        "price": 400,
+         "description": "indoor plant",
+    "image":"/indoor/f2.jpg"
+    },
+     {
+        "name":"Top 3 Beautiful Shevanti Flowers of the Season",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/indoor/f3.jpg"
+    },
+     {
+        "name":"Top 3 Beautiful Shevanti Flowers of the Season",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/indoor/f4.webp"
+    },
+     {
+        "name":"Allamanda Tiger (Peach Orange) - Plant",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/indoor/f5.jpg",
+    "discount":"20"
+    },
+     {
+        "name":"Aster (violet) - Plant",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/indoor/f6.jpg"
+    },
+     {
+        "name":"Bougainvillea (Pink) - Plant",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/indoor/f7.jpg"
+    },
+     {
+        "name":"Basil Sweet Scented - Herb Seeds",
+        "price": 288,
+         "description": "indoor plant",
+    "image":"/medicinal/m8.jpg"
+    },
+     {
+        "name":"Drumsticks, Moringa Oleifera - Plant",
+        "price":167 ,
+         "description": "indoor plant",
+    "image":"/medicinal/m9.jpg"
+    },
+
+ {
+        "name":"Nimboo, Lemon Tree (Big Fruit, Grafted) - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o7.webp"
+    },
+     {
+        "name":"Gulmohar Tree, Delonix regia - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o8.webp"
+    },
+     {
+        "name":"Gardenia Dwarf, Ananta Dwarf - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o9.webp"
+    },
+
+{
+        "name":"Kamini - Plant",
+        "price": 120,
+         "description": "indoor plant",
+    "image":"/outdoor/o10.webp"
+    }
+ 
+
+]

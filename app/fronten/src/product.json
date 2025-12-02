@@ -1,0 +1,75 @@
+[
+    {
+        "name":"5.1 inch (13 cm) Round Plastic Thermoform Pot (Mix Color) - Pack of 20",
+        "price":250 ,
+         "description": "indoor plant",
+    "image":"/images/c1.jpg",
+    "discount":"50"
+
+    },
+     {
+        "name":"23.6 inch (60 cm) Rectangle Plastic Microgreens Tray (3 mm) (Set of 2)",
+        "price": 400,
+         "description": "indoor plant",
+    "image":"/images/c2.jpg"
+    },
+     {
+        "name":"12 inch (30 cm) Rectangle Glass Vase",
+        "price": 299,
+         "description": "indoor plant",
+    "image":"/images/c3.jpg"
+    },
+     {
+        "name":"5.7 inch (14 cm) Ronda No. 14.5 Round Plastic Planter (Mix Color) - Pack of 6",
+        "price":366,
+         "description": "indoor plant",
+    "image":"/images/c4.jpg"
+    },
+     {
+        "name":"Plastic Germination Tray (102 Cells, Round) (set of 5)",
+        "price":750 ,
+         "description": "indoor plant",
+    "image":"/images/c5.jpg",
+    "discount":"20"
+    },
+     {
+        "name":"12 inch (30 cm) Grower Round Plastic Pot (Terracotta Color) (set of 3)",
+        "price":800 ,
+         "description": "indoor plant",
+    "image":"/images/c6.jpg"
+    },
+     {
+        "name":"18 inch (46 cm) Rectangle Grow Bag (Green) (set of 5)",
+        "price": 199,
+         "description": "indoor plant",
+    "image":"/images/c7.jpg"
+    },
+     {
+        "name":"11.8 inch (30 cm) Bello Window Planter No. 30 Rectangle Plastic Pot (Black) (set of 6)",
+        "price": 288,
+         "description": "indoor plant",
+    "image":"/images/c8.jpg"
+    },
+     {
+        "name":"4 Inch (10 cm) Square Glass Vase",
+        "price":167 ,
+         "description": "indoor plant",
+    "image":"/images/c9.jpg"
+    },
+
+{
+        "name":"Coir Germination Tray (8 Cells, Square) (Set of 5)",
+        "price": 198,
+         "description": "indoor plant",
+    "image":"/images/c10.jpg"
+    },
+    {
+        "name":"Warli Painting Ceramic Pots - Pack of 3",
+        "price": 366,
+         "description": "indoor plant",
+    "image":"/images/c11.jpg",
+    "discount":"25"
+    }
+    
+
+]
