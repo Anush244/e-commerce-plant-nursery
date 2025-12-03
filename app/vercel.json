@@ -1,10 +1,25 @@
 {
-    "buildCommand": "cd app/frontend && npm install && npm run build",
-    "outputDirectory": "app/frontend/dist",
-    "rewrites": [
+    "builds": [
         {
-            "source": "/api/(.*)",
-            "destination": "/app/backend/src/index.ts"
+            "src": "app/frontend/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        },
+        {
+            "src": "app/backend/src/index.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "app/backend/src/index.ts"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "app/frontend/dist/$1"
         }
     ]
 }
