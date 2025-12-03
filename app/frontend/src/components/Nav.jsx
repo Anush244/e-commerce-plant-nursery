@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import axios from "axios";
-import { useCart } from "./CartContext";  
+import { useCart } from "./CartContext";
 
 import Green from "../assets/green.png";
 import Se from "../assets/se.png";
@@ -91,7 +91,7 @@ const Nav = () => {
     }
 
     try {
-      const res = await axios.get("http://localhost:5000/api/cart", {
+      const res = await axios.get("/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const total = Array.isArray(res.data)

@@ -14,7 +14,7 @@ function OrderPage() {
   const [loading, setLoading] = useState(false);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
-  
+
   const fetchCart = async () => {
     try {
       const token = localStorage.getItem("token");
@@ -23,7 +23,7 @@ function OrderPage() {
         return;
       }
 
-      const res = await axios.get("http://localhost:5000/api/cart", {
+      const res = await axios.get("/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -62,7 +62,7 @@ function OrderPage() {
       }
 
       await axios.post(
-        "http://localhost:5000/api/orders/place-order",
+        "/api/orders/place-order",
         {
           name: form.name,
           address: form.address,
@@ -75,7 +75,7 @@ function OrderPage() {
 
       // 🧹 Clear cart after successful order
       await axios.post(
-        "http://localhost:5000/api/cart/clear",
+        "/api/cart/clear",
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -110,11 +110,10 @@ function OrderPage() {
           {steps.map((s) => (
             <div key={s.id} className="flex-1 text-center">
               <div
-                className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center font-bold transition-all duration-300 ${
-                  step === s.id
+                className={`w-10 h-10 mx-auto rounded-full flex items-center justify-center font-bold transition-all duration-300 ${step === s.id
                     ? "bg-green-500 text-white shadow-md scale-110"
                     : "bg-gray-200 text-gray-600"
-                }`}
+                  }`}
               >
                 {s.id}
               </div>

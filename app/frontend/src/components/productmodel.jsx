@@ -19,7 +19,7 @@ const ProductModal = ({ product, onClose }) => {
     if (product) { // Added a check to ensure product is not null
       const fetchFeedback = async () => {
         try {
-          const res = await axios.get("http://localhost:5000/api/feedback");
+          const res = await axios.get("/api/feedback");
           setFeedbackList(res.data.filter((f) => f.category === product.name));
         } catch (err) {
           console.error("Failed to fetch feedback:", err);
@@ -66,7 +66,7 @@ const ProductModal = ({ product, onClose }) => {
       const productId = product._id || product.id || `${product.name.toLowerCase().replace(/[^a-z0-9]/g, "-")}-${Date.now()}`;
 
       await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "/api/cart/add",
         {
           productId,
           name: product.name,
@@ -91,7 +91,7 @@ const ProductModal = ({ product, onClose }) => {
     if (!userRating) return alert("Please select a rating");
 
     try {
-      await axios.post("http://localhost:5000/api/feedback", {
+      await axios.post("/api/feedback", {
         name: userName,
         email: userEmail,
         category: product.name,
@@ -106,7 +106,7 @@ const ProductModal = ({ product, onClose }) => {
       setReviewText("");
 
       // Refetch feedback to show the new review
-      const res = await axios.get("http://localhost:5000/api/feedback");
+      const res = await axios.get("/api/feedback");
       setFeedbackList(res.data.filter((f) => f.category === product.name));
     } catch (err) {
       console.error("Failed to submit review:", err);
@@ -198,11 +198,10 @@ const ProductModal = ({ product, onClose }) => {
                     onMouseEnter={() => setHoverRating(star)}
                     onMouseLeave={() => setHoverRating(0)}
                     onClick={() => setUserRating(star)}
-                    className={`text-2xl transition-colors ${
-                      (hoverRating || userRating) >= star
+                    className={`text-2xl transition-colors ${(hoverRating || userRating) >= star
                         ? "text-yellow-400"
                         : "text-gray-300"
-                    }`}
+                      }`}
                   >
                     ★
                   </button>
@@ -253,7 +252,7 @@ const ProductModal = ({ product, onClose }) => {
                     >
                       <div className="flex justify-between items-start mb-1">
                         <p className="font-semibold text-gray-800 text-sm flex items-center gap-2">
-                          <img src={lo} className="h-6 w-6 rounded-full" alt="user avatar"/>
+                          <img src={lo} className="h-6 w-6 rounded-full" alt="user avatar" />
                           {f.name || "Anonymous"}
                         </p>
                         <span className="text-xs text-gray-400 whitespace-nowrap">
@@ -271,7 +270,7 @@ const ProductModal = ({ product, onClose }) => {
             </div>
           </div>
         </div>
-       
+
       </div>
     </div>
   );

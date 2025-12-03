@@ -19,7 +19,7 @@ function PlaceOrder() {
   const fetchCart = async () => {
     const token = localStorage.getItem("token");
     try {
-      const res = await axios.get("http://localhost:5000/api/cart", {
+      const res = await axios.get("/api/cart", {
         headers: { Authorization: `Bearer ${token}` },
       });
       const items = Array.isArray(res.data)
@@ -59,7 +59,7 @@ function PlaceOrder() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:5000/api/orders/place-order",
+        "/api/orders/place-order",
         {
           name: form.name,
           address: form.address,
@@ -100,13 +100,12 @@ function PlaceOrder() {
             return (
               <div key={label} className="flex-1 flex flex-col items-center relative">
                 <div
-                  className={`w-10 h-10 flex items-center justify-center rounded-full font-bold transition-all duration-500 ease-in-out ${
-                    isCompleted
+                  className={`w-10 h-10 flex items-center justify-center rounded-full font-bold transition-all duration-500 ease-in-out ${isCompleted
                       ? "bg-green-600 text-white scale-110"
                       : isActive
-                      ? "bg-green-100 text-green-700 scale-125"
-                      : "bg-gray-200 text-gray-600 scale-100"
-                  }`}
+                        ? "bg-green-100 text-green-700 scale-125"
+                        : "bg-gray-200 text-gray-600 scale-100"
+                    }`}
                 >
                   {current}
                 </div>
@@ -139,9 +138,8 @@ function PlaceOrder() {
         {/* Step 1: Cart */}
         {step === 1 && (
           <div
-            className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
-              direction === "next" ? "translate-x-0" : "-translate-x-full"
-            }`}
+            className={`absolute inset-0 transition-transform duration-500 ease-in-out ${direction === "next" ? "translate-x-0" : "-translate-x-full"
+              }`}
           >
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-xl font-semibold mb-4">Your Cart</h3>
@@ -194,9 +192,8 @@ function PlaceOrder() {
         {/* Step 2: Details */}
         {step === 2 && (
           <div
-            className={`absolute inset-0 transition-transform duration-500 ease-in-out ${
-              direction === "next" ? "translate-x-0" : "translate-x-full"
-            }`}
+            className={`absolute inset-0 transition-transform duration-500 ease-in-out ${direction === "next" ? "translate-x-0" : "translate-x-full"
+              }`}
           >
             <div className="bg-white p-6 rounded-xl shadow-md">
               <h3 className="text-xl font-semibold mb-4">Your Details</h3>

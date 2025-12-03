@@ -53,7 +53,7 @@ const ProductPage = () => {
   // Optional: handle search query (?q=something)
   const searchQuery =
     new URLSearchParams(location.search).get("q")?.toLowerCase() || "";
-const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(false);
 
   // Product data sources
   const productMap = {
@@ -79,7 +79,7 @@ const [showAll, setShowAll] = useState(false);
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/feedback");
+        const res = await axios.get("/api/feedback");
         setFeedbackList(res.data);
 
         const map = {};
@@ -104,7 +104,7 @@ const [showAll, setShowAll] = useState(false);
     fetchFeedback();
   }, []);
 
-  
+
   const allProducts = [
     ...product1,
     ...product2,
@@ -121,20 +121,20 @@ const [showAll, setShowAll] = useState(false);
     ...new Map(allProducts.map((p) => [p.name, p])).values(),
   ];
 
-  
+
   let filteredProducts =
     filter === "All"
       ? uniqueProducts
       : productMap[filter]
-      ? [...new Map(productMap[filter].map((p) => [p.name, p])).values()]
-      : [];
+        ? [...new Map(productMap[filter].map((p) => [p.name, p])).values()]
+        : [];
 
-  
+
   const searchedProducts =
     filter === "All" && searchQuery
       ? uniqueProducts.filter((p) =>
-          p.name.toLowerCase().includes(searchQuery)
-        )
+        p.name.toLowerCase().includes(searchQuery)
+      )
       : [];
 
   const totalPages = Math.ceil(filteredProducts.length / productsPerPage);
@@ -156,7 +156,7 @@ const [showAll, setShowAll] = useState(false);
         `${product.name.toLowerCase().replace(/[^a-z0-9]/g, "-")}-${Date.now()}`;
 
       const res = await axios.post(
-        "http://localhost:5000/api/cart/add",
+        "/api/cart/add",
         {
           productId,
           name: product.name,
@@ -172,7 +172,7 @@ const [showAll, setShowAll] = useState(false);
     }
   };
 
-  
+
   useEffect(() => {
     const scrollContainer = document.getElementById("best-seller-scroll");
     if (!scrollContainer) return;
@@ -205,7 +205,7 @@ const [showAll, setShowAll] = useState(false);
         />
       )}
 
-     
+
       <section className="w-full px-2 sm:px-4 py-4">
         <img
           src={a1}
@@ -214,9 +214,9 @@ const [showAll, setShowAll] = useState(false);
         />
       </section>
 
-     
+
       <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 px-3 sm:px-6 py-6">
-     
+
         <aside className="w-full lg:w-1/4 bg-white p-4 rounded-xl shadow">
           <h2 className="text-lg sm:text-xl font-semibold mb-4 text-gray-800">
             Categories
@@ -229,11 +229,10 @@ const [showAll, setShowAll] = useState(false);
                   setFilter(cat);
                   setCurrentPage(1);
                 }}
-                className={`w-full py-2 px-3 rounded text-sm sm:text-base ${
-                  filter === cat
+                className={`w-full py-2 px-3 rounded text-sm sm:text-base ${filter === cat
                     ? "bg-green-600 text-white"
                     : "bg-gray-100 hover:bg-gray-200"
-                }`}
+                  }`}
               >
                 {cat}
               </button>
@@ -241,9 +240,9 @@ const [showAll, setShowAll] = useState(false);
           </div>
         </aside>
 
-       
+
         <div className="flex-1 flex flex-col gap-10">
-          
+
           {/* {filter === "All" && searchQuery && (
             <section>
               <h2 className="text-xl sm:text-2xl font-bold text-green-800 mb-4">
@@ -294,95 +293,93 @@ const [showAll, setShowAll] = useState(false);
               <p className="text-gray-600 text-center col-span-full">
                 No products found for “{searchQuery || filter}”.
               </p>
-            ) : 
-            (
-              currentProducts.map((p) => {
-                const feedback =
-                  feedbackMap[p.name] || { avgRating: 0, count: 0 };
-                return (
-                  <div
-                    key={p.name}
-                    className="bg-white p-3 sm:p-4 rounded-xl shadow hover:shadow-lg transition-all flex flex-col"
-                  >
-                    <img
-                      src={p.image}
-                      alt={p.name}
-                      className="w-full h-40 sm:h-48 md:h-52 object-contain mb-2 cursor-pointer"
-                      onClick={() => setSelectedProduct(p)}
-                    />
-                    <h3 className="font-semibold text-sm sm:text-base">
-                      {p.name}
-                    </h3>
-                    <p className="text-green-700 font-bold mt-1 text-sm sm:text-base">
-                      ₹{p.price}
-                    </p>
-                    <div className="flex items-center gap-1 mt-1 text-yellow-400 text-xs sm:text-sm">
-                      {"★".repeat(Math.round(feedback.avgRating)) || "☆☆☆☆☆"}
-                      <span className="text-gray-600 ml-1">
-                        ({feedback.count})
-                      </span>
-                    </div>
-                    <button
-                      onClick={() => addToCart(p)}
-                      className="mt-auto bg-green-600 text-white py-2 rounded hover:bg-green-700 text-sm sm:text-base"
+            ) :
+              (
+                currentProducts.map((p) => {
+                  const feedback =
+                    feedbackMap[p.name] || { avgRating: 0, count: 0 };
+                  return (
+                    <div
+                      key={p.name}
+                      className="bg-white p-3 sm:p-4 rounded-xl shadow hover:shadow-lg transition-all flex flex-col"
                     >
-                      Add to Cart
-                    </button>
-                  </div>
-                );
-              })
-            )}
+                      <img
+                        src={p.image}
+                        alt={p.name}
+                        className="w-full h-40 sm:h-48 md:h-52 object-contain mb-2 cursor-pointer"
+                        onClick={() => setSelectedProduct(p)}
+                      />
+                      <h3 className="font-semibold text-sm sm:text-base">
+                        {p.name}
+                      </h3>
+                      <p className="text-green-700 font-bold mt-1 text-sm sm:text-base">
+                        ₹{p.price}
+                      </p>
+                      <div className="flex items-center gap-1 mt-1 text-yellow-400 text-xs sm:text-sm">
+                        {"★".repeat(Math.round(feedback.avgRating)) || "☆☆☆☆☆"}
+                        <span className="text-gray-600 ml-1">
+                          ({feedback.count})
+                        </span>
+                      </div>
+                      <button
+                        onClick={() => addToCart(p)}
+                        className="mt-auto bg-green-600 text-white py-2 rounded hover:bg-green-700 text-sm sm:text-base"
+                      >
+                        Add to Cart
+                      </button>
+                    </div>
+                  );
+                })
+              )}
           </main>
           {/* Pagination Controls */}
-<div className="flex justify-center items-center gap-4 mt-8">
-  <button
-    onClick={() => {
-      setCurrentPage((prev) => Math.max(prev - 1, 1));
-      window.scrollTo({ top: 0, behavior: "smooth" }); // scroll up on click
-    }}
-    disabled={currentPage === 1}
-    className={`px-4 py-2 rounded-md font-medium transition ${
-      currentPage === 1
-        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-        : "bg-green-600 hover:bg-green-700 text-white"
-    }`}
-  >
-    Previous
-  </button>
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <button
+              onClick={() => {
+                setCurrentPage((prev) => Math.max(prev - 1, 1));
+                window.scrollTo({ top: 0, behavior: "smooth" }); // scroll up on click
+              }}
+              disabled={currentPage === 1}
+              className={`px-4 py-2 rounded-md font-medium transition ${currentPage === 1
+                  ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-700 text-white"
+                }`}
+            >
+              Previous
+            </button>
 
-  <span className="text-gray-700 font-semibold">
-    Page {currentPage} of {totalPages}
-  </span>
+            <span className="text-gray-700 font-semibold">
+              Page {currentPage} of {totalPages}
+            </span>
 
-  <button
-    onClick={() => {
-      setCurrentPage((prev) => Math.min(prev + 1, totalPages));
-      window.scrollTo({ top: 0, behavior: "smooth" }); // scroll up on click
-    }}
-    disabled={currentPage === totalPages}
-    className={`px-4 py-2 rounded-md font-medium transition ${
-      currentPage === totalPages
-        ? "bg-gray-200 text-gray-500 cursor-not-allowed"
-        : "bg-green-600 hover:bg-green-700 text-white"
-    }`}
-  >
-    Next
-  </button>
-</div>
+            <button
+              onClick={() => {
+                setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+                window.scrollTo({ top: 0, behavior: "smooth" }); // scroll up on click
+              }}
+              disabled={currentPage === totalPages}
+              className={`px-4 py-2 rounded-md font-medium transition ${currentPage === totalPages
+                  ? "bg-gray-200 text-gray-500 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-700 text-white"
+                }`}
+            >
+              Next
+            </button>
+          </div>
 
         </div>
       </div>
 
-     
+
       <section className="mt-12 sm:mt-16 px-2 sm:px-6">
         <h2 className="text-center text-green-800 font-bold mb-6 text-2xl sm:text-3xl lg:text-4xl">
           Best Selling Products
         </h2>
         <div className="relative">
-         <div
-  id="best-seller-scroll"
-  className="flex gap-4 sm:gap-6 overflow-hidden px-4 py-3 whitespace-nowrap"
->
+          <div
+            id="best-seller-scroll"
+            className="flex gap-4 sm:gap-6 overflow-hidden px-4 py-3 whitespace-nowrap"
+          >
 
             {bestSellingProducts.map((p) => (
               <div
@@ -420,9 +417,9 @@ const [showAll, setShowAll] = useState(false);
         </div>
       </section>
 
-     
 
-    <div className="mt-16 px-4 sm:px-8">
+
+      <div className="mt-16 px-4 sm:px-8">
         <h2 className="text-2xl sm:text-3xl font-bold text-green-800 text-center mb-8">
           What Our Customers Say
         </h2>
@@ -490,149 +487,149 @@ const [showAll, setShowAll] = useState(false);
         </div>
 
         {feedbackList.length === 0 ? (
-  <p className="text-center text-gray-500">
-    No feedback yet. Be the first to share!
-  </p>
-) : (
-  <div>
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {(showAll ? feedbackList : feedbackList.slice(0, 6)).map((fb, index) => (
-        <div
-          key={index}
-          className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition duration-300"
-        >
-          <div className="flex justify-between items-center mb-2">
-            <h3 className="font-semibold text-green-800">{fb.name}</h3>
-            <span className="text-yellow-400 text-sm">
-              {"★".repeat(fb.rating)}{"☆".repeat(5 - fb.rating)}
-            </span>
-          </div>
-          <p className="text-gray-600 text-sm">{fb.message}</p>
-          {fb.email && (
-            <p className="text-xs text-gray-400 mt-2 italic">
-              ({fb.email})
-            </p>
-          )}
-          <p className="text-right text-xs text-gray-400 mt-2">
-            {new Date(fb.createdAt).toLocaleDateString()}
+          <p className="text-center text-gray-500">
+            No feedback yet. Be the first to share!
           </p>
-        </div>
-      ))}
+        ) : (
+          <div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {(showAll ? feedbackList : feedbackList.slice(0, 6)).map((fb, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-5 rounded-xl shadow hover:shadow-lg transition duration-300"
+                >
+                  <div className="flex justify-between items-center mb-2">
+                    <h3 className="font-semibold text-green-800">{fb.name}</h3>
+                    <span className="text-yellow-400 text-sm">
+                      {"★".repeat(fb.rating)}{"☆".repeat(5 - fb.rating)}
+                    </span>
+                  </div>
+                  <p className="text-gray-600 text-sm">{fb.message}</p>
+                  {fb.email && (
+                    <p className="text-xs text-gray-400 mt-2 italic">
+                      ({fb.email})
+                    </p>
+                  )}
+                  <p className="text-right text-xs text-gray-400 mt-2">
+                    {new Date(fb.createdAt).toLocaleDateString()}
+                  </p>
+                </div>
+              ))}
+            </div>
+
+            {/* Show More / Show Less Button */}
+            {feedbackList.length > 6 && (
+              <div className="text-center mt-6">
+                <button
+                  onClick={() => setShowAll(!showAll)}
+                  className="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition"
+                >
+                  {showAll ? "Show Less" : "Show More"}
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+
+
+      </div><div className='bg-green-800 text-center p-4 h-auto rounded-t-xl mt-2'>
+        <footer className="bg-green-800 text-white py-10 px-6 md:px-12 lg:px-20">
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+
+            <div>
+              <div className="flex items-center space-x-2 mb-4">
+                <img
+                  src={green}
+                  alt="logo"
+                  className="w-30 h-8"
+                />
+
+              </div>
+              <p className="text-sm text-gray-100 ">
+                Your trusted online plant nursery, bringing nature closer to your home with a wide
+                variety of plants and gardening essentials.
+              </p>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <ul className="space-y-2 text-gray-100 text-sm">
+                <li><a href="/About" className="hover:text-yellow-300 transition">About Us</a></li>
+                <li><a href="/Product" className="hover:text-yellow-300 transition">Products</a></li>
+                <li><a href="/guide" className="hover:text-yellow-300 transition">Blog</a></li>
+                <li><a href="/Contact" className="hover:text-yellow-300 transition">Contact</a></li>
+              </ul>
+            </div>
+
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Policies</h3>
+              <ul className="space-y-2 text-gray-100 text-sm">
+                <li><a href="#" className="hover:text-yellow-300 transition">Return Policy</a></li>
+                <li><a href="#" className="hover:text-yellow-300 transition">Shipping Policy</a></li>
+                <li><a href="#" className="hover:text-yellow-300 transition">Terms & Conditions</a></li>
+                <li><a href="#" className="hover:text-yellow-300 transition">Privacy Policy</a></li>
+              </ul>
+            </div>
+
+
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+              <p className="text-sm text-gray-100 mb-3">
+                Subscribe to get special offers and plant care tips!
+              </p>
+              <form className="flex flex-col md:flex-row gap-3 w-full ">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="w-full sm:w-auto flex-1 px-3  py-2 md:w-18   rounded-md border border-green-600 text-gray-800 
+                       focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                />
+                <button
+                  type="submit"
+                  className="w-full sm:w-auto bg-green-600 hover:bg-green-500 px-4 py-2 rounded-md transition text-white"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+
+
+          <div className="border-t border-green-600 my-8"></div>
+
+
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-100 space-y-3 sm:space-y-0">
+            <p>© 2025 Green Nursery. All rights reserved.</p>
+            <div className="flex space-x-4 text-xl">
+              <div className="mt-8">
+                <h3 className="font-semibold mb-3">Follow Us</h3>
+                <div className="flex gap-5 text-2xl">
+                  <a href="#" className="">
+                    <img src={fa} className='h-8' ></img>
+                  </a>
+                  <a href="#" className="">
+                    <img src={y} className='h-8' ></img>
+                  </a>
+                  <a href="#" className="">
+                    <img src={i} className='h-7' ></img>
+                  </a>
+                  <a href="#" className="">
+                    <img src={x} className='h-8' ></img>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
 
-    {/* Show More / Show Less Button */}
-    {feedbackList.length > 6 && (
-      <div className="text-center mt-6">
-        <button
-          onClick={() => setShowAll(!showAll)}
-          className="px-6 py-2 bg-green-700 text-white rounded-lg hover:bg-green-800 transition"
-        >
-          {showAll ? "Show Less" : "Show More"}
-        </button>
-      </div>
-    )}
-  </div>
-)}
 
 
-     </div><div className='bg-green-800 text-center p-4 h-auto rounded-t-xl mt-2'>
-        <footer className="bg-green-800 text-white py-10 px-6 md:px-12 lg:px-20">
-           
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-     
-             
-             <div>
-               <div className="flex items-center space-x-2 mb-4">
-                 <img
-                   src={green}
-                   alt="logo"
-                   className="w-30 h-8"
-                 />
-                 
-               </div>
-               <p className="text-sm text-gray-100 ">
-                 Your trusted online plant nursery, bringing nature closer to your home with a wide
-                 variety of plants and gardening essentials.
-               </p>
-             </div>
-     
-             <div>
-               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
-               <ul className="space-y-2 text-gray-100 text-sm">
-                 <li><a href="/About" className="hover:text-yellow-300 transition">About Us</a></li>
-                 <li><a href="/Product" className="hover:text-yellow-300 transition">Products</a></li>
-                 <li><a href="/guide" className="hover:text-yellow-300 transition">Blog</a></li>
-                 <li><a href="/Contact" className="hover:text-yellow-300 transition">Contact</a></li>
-               </ul>
-             </div>
-     
-           
-             <div>
-               <h3 className="text-lg font-semibold mb-4">Policies</h3>
-               <ul className="space-y-2 text-gray-100 text-sm">
-                 <li><a href="#" className="hover:text-yellow-300 transition">Return Policy</a></li>
-                 <li><a href="#" className="hover:text-yellow-300 transition">Shipping Policy</a></li>
-                 <li><a href="#" className="hover:text-yellow-300 transition">Terms & Conditions</a></li>
-                 <li><a href="#" className="hover:text-yellow-300 transition">Privacy Policy</a></li>
-               </ul>
-             </div>
-     
-             
-             <div>
-               <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
-               <p className="text-sm text-gray-100 mb-3">
-                 Subscribe to get special offers and plant care tips!
-               </p>
-               <form className="flex flex-col md:flex-row gap-3 w-full ">
-          <input
-            type="email"
-            placeholder="Your email"
-            className="w-full sm:w-auto flex-1 px-3  py-2 md:w-18   rounded-md border border-green-600 text-gray-800 
-                       focus:outline-none focus:ring-2 focus:ring-yellow-400"
-          />
-          <button
-            type="submit"
-            className="w-full sm:w-auto bg-green-600 hover:bg-green-500 px-4 py-2 rounded-md transition text-white"
-          >
-            Submit
-          </button>
-        </form>
-             </div>
-           </div>
-     
-           
-           <div className="border-t border-green-600 my-8"></div>
-     
-          
-           <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-100 space-y-3 sm:space-y-0">
-             <p>© 2025 Green Nursery. All rights reserved.</p>
-             <div className="flex space-x-4 text-xl">
-               <div className="mt-8">
-                          <h3 className="font-semibold mb-3">Follow Us</h3>
-                          <div className="flex gap-5 text-2xl">
-                            <a href="#" className="">
-                              <img src={fa} className='h-8' ></img>
-                            </a>
-                            <a href="#" className="">
-                              <img src={y}  className='h-8' ></img>
-                            </a>
-                            <a href="#" className="">
-                              <img src={i}  className='h-7' ></img>
-                            </a>
-                            <a href="#" className="">
-                              <img src={x}  className='h-8' ></img>
-                            </a>
-                          </div>
-                        </div>
-             </div>
-           </div>
-         </footer>
-       </div>
-      </div>
-      
 
-    
-    
   );
 };
 

@@ -19,7 +19,7 @@ const FeedbackForm = () => {
   useEffect(() => {
     const fetchFeedback = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/feedback");
+        const res = await axios.get("/api/feedback");
         setFeedbackList(res.data);
       } catch (err) {
         console.error("Error fetching feedback:", err);
@@ -36,11 +36,11 @@ const FeedbackForm = () => {
     }
     try {
       setLoading(true);
-      await axios.post("http://localhost:5000/api/feedback", formData);
+      await axios.post("/api/feedback", formData);
       alert("Thank you for your feedback!");
       setFormData({ name: "", category: "", rating: "", message: "" });
 
-      const res = await axios.get("http://localhost:5000/api/feedback");
+      const res = await axios.get("/api/feedback");
       setFeedbackList(res.data);
     } catch (error) {
       console.error(error);
@@ -53,32 +53,32 @@ const FeedbackForm = () => {
   const averageRating =
     feedbackList.length > 0
       ? (
-          feedbackList.reduce((sum, f) => sum + Number(f.rating), 0) /
-          feedbackList.length
-        ).toFixed(1)
+        feedbackList.reduce((sum, f) => sum + Number(f.rating), 0) /
+        feedbackList.length
+      ).toFixed(1)
       : 0;
 
   return (
     <div className="bg-gradient-to-b from-green-50 via-white to-green-50 min-h-screen">
-    
+
       <div className="text-center py-12 bg-gradient-to-r from-green-700 to-green-500 text-white shadow-lg">
         <h1 className="text-4xl md:text-5xl font-extrabold mb-2">
-          We Value Your Feedback 
+          We Value Your Feedback
         </h1>
         <p className="text-lg opacity-90">
           Help us improve your plant shopping experience!
         </p>
       </div>
 
-    
+
       <div className="flex justify-center px-4 py-12">
         <div className="bg-white/70 backdrop-blur-lg shadow-2xl border border-green-100 rounded-3xl p-8 md:p-10 max-w-lg w-full hover:shadow-green-200 transition-all duration-300">
           <h2 className="text-2xl font-bold text-green-800 text-center mb-6">
-            Share Your Thoughts 
+            Share Your Thoughts
           </h2>
 
           <form onSubmit={handleSubmit} className="space-y-5">
-           
+
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Name <span className="text-red-500">*</span>
@@ -93,7 +93,7 @@ const FeedbackForm = () => {
               />
             </div>
 
-          
+
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Category
@@ -132,7 +132,7 @@ const FeedbackForm = () => {
               </select>
             </div>
 
-        
+
             <div>
               <label className="block text-gray-700 font-medium mb-2">
                 Message <span className="text-red-500">*</span>
@@ -147,7 +147,7 @@ const FeedbackForm = () => {
               ></textarea>
             </div>
 
-          
+
             <button
               type="submit"
               disabled={loading}
@@ -159,10 +159,10 @@ const FeedbackForm = () => {
         </div>
       </div>
 
-     
+
       <div className="max-w-4xl mx-auto bg-white shadow-md rounded-2xl p-8 mb-10 border border-green-100">
         <h2 className="text-3xl font-bold text-green-800 text-center mb-6">
-           Customer Ratings Summary
+          Customer Ratings Summary
         </h2>
 
         <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left">
@@ -204,7 +204,7 @@ const FeedbackForm = () => {
         </div>
       </div>
 
-    
+
       <div className="max-w-6xl mx-auto px-4 pb-20">
         <h2 className="text-3xl font-bold text-green-800 text-center mb-8">
           What Our Customers Say
