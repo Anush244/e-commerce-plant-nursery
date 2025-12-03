@@ -1,11 +1,10 @@
 {
-    "rootDirectory": "app/frontend",
-    "buildCommand": "npm install && npm run build",
-    "outputDirectory": "dist",
+    "buildCommand": "cd app/frontend && npm install && npm run build",
+    "outputDirectory": "app/frontend/dist",
     "rewrites": [
         {
             "source": "/api/(.*)",
-            "destination": "/backend/src/index.ts"
+            "destination": "/app/backend/src/index.ts"
         }
     ]
 }
