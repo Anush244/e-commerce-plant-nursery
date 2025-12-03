@@ -1,8 +1,14 @@
 {
-    "rewrites": [
+    "builds": [
         {
-            "source": "/api/:path*",
-            "destination": "/app/backend/src/index"
+            "src": "app/backend/src/index.ts",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "app/backend/src/index.ts"
         }
     ]
 }
