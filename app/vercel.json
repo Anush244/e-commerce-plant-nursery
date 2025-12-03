@@ -1,5 +1,5 @@
 {
-    "framework": null,
+    "rootDirectory": "frontend",
     "buildCommand": "npm install && npm run build",
     "outputDirectory": "dist",
     "rewrites": [
